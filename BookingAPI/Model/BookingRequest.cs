@@ -11,5 +11,6 @@ namespace BookingAPI.Model
         [Required]
         [StringLength(100, MinimumLength = 1, ErrorMessage = "Name must not be none or empty.")]
         public string Name { get; set; }
+        public string Id { get; set; }
     }
 }

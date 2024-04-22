@@ -40,7 +40,7 @@ namespace BookingAPI.Controllers
             {
                 return BadRequest("Invalid booking time format");
             }
-            return Ok("\"" + "bookingId: " + "\"" + "\"" + await _bookingRepository.BookTimeSlotAsync(Guid.NewGuid().ToString(), requestBody) + "\"");
+            return Ok("\"" + "bookingId \": " + "\"" + await _bookingRepository.BookTimeSlotAsync(Guid.NewGuid().ToString(), requestBody) + "\"");
         }
 
         [HttpPost("bookingSlot", Name = "ProcessBookingSlots")]
